@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Glassmorphism + CSS Animation</title>
+   <link rel="stylesheet" href="./glass.css">
+</head>
+<body>
+   
+<div class="container_wrapper">
+   <div class="card"  id="first">
+      <div class="content">
+         <h2>01</h2>
+
+      </div>
+   </div>
+
+   <div class="card">
+      <div class="content">
+         <h2>02</h2>
+         
+      </div>
+   </div>
+
+   <div class="card">
+      <div class="content" >
+         <h2>03</h2>
+         
+      </div>
+   </div>
+</div> <br><br>
+
+
+<div id="item-wrapper">
+   <h5 id="weak" class="pass-code">password is weak</h5>
+   <h5 id="okay" class="pass-code">password is okay</h5>
+   <h5 id="perfect" class="pass-code">password is perfect</h5>
+</div>
+<form action="#" method="post" id="form" onsubmit='return validate()'>
+  <input type="text" name="" id="password" placeholder="Enter password" required="" oninput='comfirm()'>
+  <br>
+  <button type="submit">Submit</button>
+</form> <br>
+
+   
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+
+<script type="text/javascript" lang="javascript">
+   VanillaTilt.init(document.querySelectorAll('.card'), {
+      max: 25,
+      speed: 400
+   });
+
+   
+  //  onsubmit actions 
+   function validate() {
+      let password_values = document.querySelector('#password').value;
+
+      if (password_values.length >= 9) {   
+         console.log("hello user!");
+         return false;
+      }
+       else{
+         console.log("hey");
+         return false;
+      }
+   }
+   validate();
+
+
+  // for checking user's password strength
+  function comfirm(){
+
+   let weak_password = document.querySelector("h5#weak");
+   let good_password = document.querySelector("h5#okay");
+   let perfect_password = document.querySelector("h5#perfect");
+   let password_value = document.querySelector('#password').value;
+
+  if (password_value.length <= 8) {
+   weak_password.classList.add('active');
+   good_password.classList.remove('active');
+   perfect_password.classList.remove('active');
+  }
+  else if(password_value.length >= 9 && password_value.length < 15){
+   good_password.classList.add('active');
+   weak_password.classList.remove('active');
+   perfect_password.classList.remove('active');
+  }
+  else if(password_value.length > 15){
+   perfect_password.classList.add('active');
+   good_password.classList.remove('active');
+   weak_password.classList.remove('active');
+  }
+  }
+  comfirm();
+
+</script>
+</body>
+</html>

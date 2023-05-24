@@ -1,0 +1,214 @@
+
+
+*, *::before, *::after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   font-family:sans-serif;
+   overflow-x: hidden;
+   text-decoration: none;
+}
+body{
+   /* display: flex;
+   justify-content: center;
+   align-items: center; */
+   min-height: 760px;
+   background: #161623;
+}
+body::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(20deg,#e73c75, rgb(211, 105, 179));
+   clip-path: circle(26% at right 78%);
+}
+body::after{ 
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(20deg,#2196f3,#e91e63);
+   clip-path: circle(20% at 10% 10%);
+}
+div.container_wrapper{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   flex-wrap: wrap;
+   z-index: 1;
+   height: auto;
+   /* margin: 20rem 0; */
+}
+.container_wrapper .card{
+   position: relative;
+   width: 280px;
+   height: 400px;
+   margin: 30px;
+   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+   border-radius: 15px;
+   background: rgba(255, 255, 255, 0.1);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-top: 1px solid rgba(255, 255, 255, 0.5);
+   border-left: 1px solid rgba(255, 255, 255, 0.5);
+   backdrop-filter: blur(6px);
+   cursor: grab;
+}
+.container_wrapper .card::before{
+   content: '';
+   height: 4rem;
+   width: 12rem;
+   clip-path: circle(20%);
+   background: linear-gradient(17deg, #3298eb 20%,#e73c75 100%);
+   position: absolute;
+   top: 20rem;
+}
+.container_wrapper .card .content h2{
+   position: absolute;
+   top: 0px;
+   right: 30px;
+   font-size: 8em;
+   color: rgba(255, 255, 255, 0.05);
+}
+
+
+
+form#form{
+   margin: -2rem 0;
+}
+input[type=text]{
+   width: 20rem;
+   height: 10px;
+   padding: 1.4rem;
+   outline: none;
+   font-size: 15px;
+   border: 1.5px solid rgb(216, 213, 213);
+   margin: 0 2rem;
+   background: #161623;
+   color: rgb(216, 213, 213);
+   border-radius: 8px;
+}
+button[type=submit]{
+   background: #161623;
+   position:relative;
+   padding: 9.9px;
+   width: 6rem;  
+   color: rgb(216, 213, 213);
+   cursor: pointer;
+   border: 1.5px solid rgb(216, 213, 213);
+   margin: 7px 8.7rem;
+   font-size: 15px;
+   border-radius:5px;
+}
+#item-wrapper{
+   margin: 0 2rem;
+   color:white;
+   display: block;
+   overflow: hidden;
+   width: 35rem;
+}
+h5.pass-code{
+   font-size: 12px;
+   color: red;
+   background: #fff;
+   padding: 5px 9px;
+   text-align: center;
+   border-radius: 1.5px;
+   box-shadow: 0 0 4px #eaeaea;
+   width: 8.5rem;
+   position: relative;
+   bottom: -1.3px;
+}
+h5.pass-code:nth-child(2){
+   color: orange;
+   position: relative;
+   bottom: 25px;
+}
+h5.pass-code:nth-child(3){
+   color: green;
+   position: relative;
+   bottom: 50px;
+}
+h5#weak,h5#okay,h5#perfect{ /* all buttons */
+   opacity: 0%;
+   transition: ease 0.3s;
+}
+/* active claslist statues for password */
+h5#weak.active,h5#okay.active,h5#perfect.active{
+   opacity: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+div#first{
+   animation-name: animate;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   transition: ease 0.3s;
+}
+div#first:hover{
+   animation-play-state: paused;
+}
+
+
+
+
+@keyframes animate{
+   0%{
+    transform: scaleX(-1);
+   }
+   85%{
+      transform: scaleX(1);
+      transform:skewY(-12deg);
+      background: linear-gradient(to top, rgba(235, 231, 231, 0.356), rgba(255, 255, 255, 0.1));    
+   }
+}
+
+ @-o-keyframes animate{
+      0%{
+    transform: scaleX(-1);
+   }
+   85%{
+      transform: scaleX(1);
+      transform:skewY(-12deg);
+      background: linear-gradient(to top, rgba(235, 231, 231, 0.356), rgba(255, 255, 255, 0.1));    
+}
+}
+
+@-moz-keyframes animate{
+       0%{
+    transform: scaleX(-1);
+   }
+   85%{
+      transform: scaleX(1);
+      transform:skewY(-12deg);
+      background: linear-gradient(to top, rgba(235, 231, 231, 0.356), rgba(255, 255, 255, 0.1));    
+   }
+}
+
+@-webkit-keyframes animate{
+      0%{
+    transform: scaleX(-1);
+   }
+   85%{
+      transform: scaleX(1);
+      transform:skewY(-12deg);
+      background: linear-gradient(to top, rgba(235, 231, 231, 0.356), rgba(255, 255, 255, 0.1));    
+   }
+} 
