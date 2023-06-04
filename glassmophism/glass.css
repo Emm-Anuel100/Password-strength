@@ -1,5 +1,4 @@
 
-
 *, *::before, *::after{
    margin: 0;
    padding: 0;
@@ -10,9 +9,6 @@
    text-decoration: none;
 }
 body{
-   /* display: flex;
-   justify-content: center;
-   align-items: center; */
    min-height: 760px;
    background: #161623;
 }
@@ -45,7 +41,6 @@ div.container_wrapper{
    flex-wrap: wrap;
    z-index: 1;
    height: auto;
-   /* margin: 20rem 0; */
 }
 .container_wrapper .card{
    position: relative;
@@ -138,11 +133,10 @@ h5.pass-code:nth-child(3){
    position: relative;
    bottom: 50px;
 }
-h5#weak,h5#okay,h5#perfect{ /* all buttons */
+h5#weak,h5#okay,h5#perfect{ 
    opacity: 0%;
    transition: ease 0.3s;
 }
-/* active claslist statues for password */
 h5#weak.active,h5#okay.active,h5#perfect.active{
    opacity: 100%;
 }
