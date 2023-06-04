@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Glassmorphism + CSS Animation</title>
+   <title>Glassmorphism + Password strength notifier using JS</title>
    <link rel="stylesheet" href="./glass.css">
 </head>
 <body>
@@ -13,21 +13,18 @@
    <div class="card"  id="first">
       <div class="content">
          <h2>01</h2>
-
       </div>
    </div>
 
    <div class="card">
       <div class="content">
-         <h2>02</h2>
-         
+         <h2>02</h2>     
       </div>
    </div>
 
    <div class="card">
       <div class="content" >
-         <h2>03</h2>
-         
+         <h2>03</h2>  
       </div>
    </div>
 </div> <br><br>
@@ -45,25 +42,24 @@
 </form> <br>
 
    
+   
 <script type="text/javascript" src="vanilla-tilt.js"></script>
-
 <script type="text/javascript" lang="javascript">
    VanillaTilt.init(document.querySelectorAll('.card'), {
       max: 25,
       speed: 400
    });
 
-   
-  //  onsubmit actions 
+  //  submision of form
    function validate() {
       let password_values = document.querySelector('#password').value;
 
       if (password_values.length >= 9) {   
-         console.log("hello user!");
-         return false;
+         console.log("password is okay!");
+         return true;
       }
        else{
-         console.log("hey");
+         console.log("password not okay");
          return false;
       }
    }
