@@ -36,7 +36,7 @@
    <h5 id="perfect" class="pass-code">password is perfect</h5>
 </div>
 <form action="#" method="post" id="form" onsubmit='return validate()'>
-  <input type="text" name="" id="password" placeholder="Enter password" required="" oninput='comfirm()'>
+  <input type="text" name="" id="password" placeholder="Enter password" required="" oninput='password_strength()'>
   <br>
   <button type="submit">Submit</button>
 </form> <br>
@@ -67,7 +67,7 @@
 
 
   // for checking user's password strength
-  function comfirm(){
+  function password_strength(){
 
    let weak_password = document.querySelector("h5#weak");
    let good_password = document.querySelector("h5#okay");
