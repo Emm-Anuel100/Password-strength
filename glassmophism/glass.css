@@ -1,4 +1,3 @@
-
 *, *::before, *::after{
    margin: 0;
    padding: 0;
@@ -7,6 +6,7 @@
    font-family:sans-serif;
    overflow-x: hidden;
    text-decoration: none;
+   list-style: none;
 }
 body{
    min-height: 760px;
@@ -140,15 +140,6 @@ h5#weak,h5#okay,h5#perfect{
 h5#weak.active,h5#okay.active,h5#perfect.active{
    opacity: 100%;
 }
-
-
-
-
-
-
-
-
-
 
 div#first{
    animation-name: animate;
